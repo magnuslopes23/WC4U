@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Animated Login Form</title>
+    <title>Login Form</title>
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src='./js/validation.js'></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style='background:#070707'>
@@ -19,19 +20,18 @@
                 <ul>
                     <li><a href="index.php"> HOME</a></li>
                     <li><a href="index.php">EVENT</a></li>
-                    <li><a href="#">DONATE</a></li>
+                    <li><a href="index.php">DONATE</a></li>
                     <li><a href="index.php">CONTACT</a></li>
                     <li><a href="signup.php">SIGN UP</a></li>
                 </ul>
             </div>
         </nav>
-	<!-- <img class="wave" src="images/wave.png"> -->
 	<div class="container">
 		<div class="img">
 			<img src="images/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form id='form' action="login.php" method='POST'>
 				<img src="images/avatar.svg">
 				<h2 class="title" style='color:#6C63FF'>Welcome</h2>
            		<div class="input-div one">
@@ -39,8 +39,9 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5 style='color:white'>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<label style='color:white' for="username">Username</label>
+						<input name='username' id='username' type="text" class="input">
+							  
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -48,11 +49,11 @@
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5 style='color:white'>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<label style='color:white' for="password">Password</label>
+						<input name='password' id='password' type="password" class="input">
+						<div id='errors'></div>
             	   </div>
             	</div>
-            	<a href="#">Forgot Password?</a>
             	<input type="submit" class="btn" value="Login">
             </form>
         </div>
@@ -63,7 +64,8 @@
 
         toggleButton.addEventListener('click', () => {
             navbarLinks.classList.toggle('active')
-        })
+		})
+		
     </script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>

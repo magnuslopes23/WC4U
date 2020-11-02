@@ -57,6 +57,7 @@ form{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	top: -11px;
 }
 
 .i i{
@@ -68,10 +69,10 @@ form{
 	height: 45px;
 }
 
-.input-div > div > h5{
+.input-div > div > label{
 	position: absolute;
 	left: 10px;
-	top: -1;
+	top: 15px;
 	transform: translateY(-90%);
 	color: #999;
 	font-size: 18px;
@@ -100,7 +101,7 @@ form{
 	width: 50%;
 }
 
-.input-div.focus > div > h5{
+.input-div.focus > div > label{
 	top: -5px;
 	font-size: 15px;
 }
@@ -185,15 +186,13 @@ a:hover{
 	color: #F7DC5F;
 	border-radius: 6px;
 	padding: 5px 0;
-  
-	/* Position the tooltip */
 	position: absolute;
 	z-index: 1;
   }
   .tooltip .tooltiptext::after {
 	content: " ";
 	position: absolute;
-	bottom: 100%;  /* At the top of the tooltip */
+	bottom: 100%;  
 	left: 10%;
 	margin-left: -5px;
 	border-width: 5px;
@@ -215,15 +214,13 @@ a:hover{
 	color: #F7DC5F;
 	border-radius: 6px;
 	padding: 5px 0;
-  
-	/* Position the tooltip */
 	position: absolute;
 	z-index: 1;
   }
   .tooltip-1 .tooltiptext::after {
 	content: " ";
 	position: absolute;
-	bottom: 100%;  /* At the top of the tooltip */
+	bottom: 100%;
 	left: 90%;
 	margin-left: -6px;
 	border-width: 6px;
@@ -245,15 +242,13 @@ a:hover{
 	color: #F7DC5F;
 	border-radius: 6px;
 	padding: 5px 0;
-  
-	/* Position the tooltip */
 	position: absolute;
 	z-index: 1;
   }
   .tooltip-2 .tooltiptext::after {
 	content: " ";
 	position: absolute;
-	top: 100%;  /* At the top of the tooltip */
+	top: 100%;  
 	left: 10%;
 	margin-left: -6px;
 	border-width: 6px;
@@ -275,15 +270,13 @@ a:hover{
 	color: #F7DC5F;
 	border-radius: 6px;
 	padding: 5px 0;
-  
-	/* Position the tooltip */
 	position: absolute;
 	z-index: 1;
   }
   .tooltip-3 .tooltiptext::after {
 	content: " ";
 	position: absolute;
-	top: 100%;  /* At the top of the tooltip */
+	top: 100%;
 	left: 90%;
 	margin-left: -6px;
 	border-width: 6px;
@@ -326,6 +319,26 @@ a:hover{
 	background-position: right;
 }
 
+.reservation{
+	width: 80%;
+	height: 40px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	background-color: #ffffff;
+	font-size: 22px;
+	color: #070707;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+}
+option{
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+}
 
 @media screen and (max-width: 1050px){
 	.container{

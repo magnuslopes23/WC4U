@@ -17,15 +17,14 @@
                 </a>
             <div class="navbar-links">
                 <ul>
-                    <li><a href="index.php"> HOME</a></li>
-                    <li><a href="index.php">EVENT</a></li>
-                    <li><a href="index.php">DONATE</a></li>
-                    <li><a href="index.php">CONTACT</a></li>
-                    <li><a href="signup.php">SIGN UP</a></li>
+                    <li><a href="index.html"> HOME</a></li>
+                    <li><a href="index.html">EVENT</a></li>
+                    <li><a href="#">DONATE</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                    <li><a href="signup.html">SIGN UP</a></li>
                 </ul>
             </div>
         </nav>
-	<!-- <img class="wave" src="images/wave.png"> -->
 	<div class="container">
 		<div class="img">
 			<img src="images/donate.svg">

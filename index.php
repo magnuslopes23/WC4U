@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel='stylesheet' href='./css/styles.css' >
-    <title>Document</title>
+    <title>WC4U</title>
 </head>
 <body>
     <div class='container'>
@@ -28,7 +28,8 @@
         </nav>
         <div class='conatiner-1'>
             <div>
-                <img class='logo' src="./images/logo.png" alt="">   
+                <img class='logo' src="./images/logo.png" alt="">
+                <p class='logo-text'>WE CARE FOR YOU</p>   
             </div>
             <div class='para'>
                 <h1 style='font-family:Courgette, cursive;color:#F7DC5F'>Welcome</h1>
@@ -36,13 +37,12 @@
                 Our children are the very heart of our mission. Though all come from destitute and desperate situations, they are all cared for as members of our large family and treated as the beautiful individuals that they are. As with all children worldwide, each boy and girl comes to us with their own unique dreams, passions and talents. Our job is to develop the whole person, not simply feed and clothe a needy child.</p>            
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br>
         <br id='events'>
         <div class='container-2' >
             <h2 class='event-title'>EVENTS &nbsp WE &nbsp ORGANISE</h2>
-            <img class='event-image' src="images/beach.jpg" alt="">
-            <img class='event-image' src="images/marathon.jpg" alt="">
-            <img class='event-image' src="images/blood.jpg" alt="">
+            <a href="event.html"><img class='event-image' src="images/beach.jpg" alt=""></a>
+            <a href="event.html"><img class='event-image' src="images/marathon.jpg" alt=""></a> 
+            <a href="event.php"><img class='event-image' src="images/blood.jpg" alt=""></a>
         </div>
         <br><br>
         <div class='container-3' id='donate'>
@@ -112,7 +112,7 @@
             <a href="#events">Events</a>
             <a href="#donate">Donate</a>
             <a href="#contact">Contact</a>
-            <a href="#team">Login</a>
+            <a href="login.html">Login</a>
             </p>
             <p class="footer-company-name">WC4U © 2020</p>
         </div>
@@ -135,7 +135,7 @@
         <div class="footer-right">
             <p class="footer-company-about">
                 <span>About WC4U</span>
-                Our mission is to provide a platform to learners and technical enthusiasts alike to explore leading technologies and promote Student’s engagement in their holistic development and learning.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deserunt qui incidunt optio rem soluta corporis amet et harum laboriosam eveniet est voluptas beatae.
             </p>
             <div class="footer-icons">
                 <a href="https://instagram.com/sfit_itsa?igshid=19hn3d3x02n06"><i class="fa fa-instagram"></i></a>
