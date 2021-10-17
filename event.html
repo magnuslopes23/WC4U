@@ -17,11 +17,11 @@
                 </a>
             <div class="navbar-links">
                 <ul>
-                    <li><a href="index.html"> HOME</a></li>
+                    <li><a href="./index.html"> HOME</a></li>
                     <li><a href="#">EVENT</a></li>
-                    <li><a href="index.html">DONATE</a></li>
-                    <li><a href="index.html">CONTACT</a></li>
-                    <li><a href="signup.html">SIGN UP</a></li>
+                    <li><a href="./index.html#donate">DONATE</a></li>
+                    <li><a href="./index.html#contact">CONTACT</a></li>
+                    <li><a href="login.html">ADMIN</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,19 +31,20 @@
 			<img src="images/events.svg">
 		</div>
 		<div class="login-content">
-			<form action="event.php">
+			<form action="events.php" method="POST">
                 <p style='color:#00bcd4;font-size:22px;letter-spacing:1px'>We also collect funds by organising social events</p>
                 <p style='color:#00bcd4;font-size:28px;'>COME JOIN US NOW</p>
-                <label for="reservation" style='color:#F7DC5F;font-size:22px;letter-spacing:1px'>Select An Event:</label>
-                <select name="reservation" id="reservation" class='reservation'>
+                <input type="text" name='fullname' placeholder='Full Name' style='width:280px;height:30px'><br>
+                <label for="reservation" style='color:#F7DC5F;font-size:22px;letter-spacing:1px;margin-top:10px'>Select An Event:</label>
+                <select name="event" id="reservation" class='reservation'>
                     <div class='options'>
-                        <option value="beachcleaning">Beach Cleaning</option>
-                        <option value="marathon">Marathon</option>
-                        <option value="blooddon">Blood Donation</option>
+                        <option value="Beach Cleaning">Beach Cleaning</option>
+                        <option value="Marathon">Marathon</option>
+                        <option value="Blood Donation">Blood Donation</option>
                     </div>
                 </select>
                 <p style='color:#00bcd4;font-size:22px;letter-spacing:1px'>Registration fee is &#x20B9 100. You can help by donating more</p>
-                <input type="number" class='btn-2' min='100' value='100'>
+                <input type="number" name='fees' class='btn-2' min='100' value='100'>
             	<input type="submit" class="btn" value="Register">
             </form>
         </div>

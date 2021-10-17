@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +19,10 @@
             <div class="navbar-links">
                 <ul>
                     <li><a href="index.html"> HOME</a></li>
-                    <li><a href="index.html">EVENT</a></li>
+                    <li><a href="index.html#events">EVENT</a></li>
                     <li><a href="#">DONATE</a></li>
-                    <li><a href="index.html">CONTACT</a></li>
-                    <li><a href="signup.html">SIGN UP</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                    <li><a href="login.html">ADMIN</a></li>
                 </ul>
             </div>
         </nav>
@@ -30,28 +31,32 @@
 			<img src="images/donate.svg">
 		</div>
 		<div class="login-content">
-			<form action="donate.php">
+			<form action="donation.php" method='POST'>
                 <div class='wrapper'>
                     <p style='color:#00bcd4;font-size:22px;letter-spacing:2px'>We want to do more and you can help by</p>
                     <p style='color:#00bcd4;font-size:30px;'>DONATING NOW</p>
-                    <div  class="tooltip">
-                        <input type="submit"  class="donate-btn" value="&#x20B9 6000">
+                    <input type="text" name='fullname' placeholder='Full Name' style='width:303px;height:30px;margin:   10px;'><br>
+                    <!-- <div  class="tooltip">
+                        <input type="number" name='amount' class="donate-btn" id="amount" value="6000">
                         <span class="tooltiptext">Can bring immediate relief to one child in need</span>
                     </div>
                     <div  class="tooltip-1">
-                        <input type="submit"  class="donate-btn" value="&#x20B9 9600">
+                        <input type="nymber" name='amount'  class="donate-btn" value="9600">
                         <span class="tooltiptext">Can bring immediate relief to 2 children in need.</span>
                     </div>
                     <div  class="tooltip-2">
-                        <input type="submit"  class="donate-btn" value="&#x20B9 12000">
+                        <input type="nymber" name='amount' class="donate1-btn" value=" 12000">
                         <span class="tooltiptext">Can bring immediate relief to 3 children in need.</span>
                     </div>
                     <div  class="tooltip-3">
-                        <input type="submit"  class="donate-btn" value="&#x20B9 18000">
+                        <input type="radio" name='amount'  class="donate1-btn" value=" 18000">
                         <span class="tooltiptext">Can bring immediate relief to 4 children in need.</span>
+                    </div> -->
+                    <div class='donate-btn-container'>
+                        <input type="number" name='amount' class='btn-2' min="5000" value="5000">
+            	        <input type="submit" class="btn" value="Donate">
                     </div>
-                    <input type="number" class='btn-2' placeholder='Other Amount' >
-            	    <input type="submit" class="btn" value="Donate">
+                    
                 </div>
             </form>
         </div>
@@ -63,7 +68,10 @@
         toggleButton.addEventListener('click', () => {
             navbarLinks.classList.toggle('active')
         })
+
+        var amount = document.getElementById('amount').value;
+        console.log(typeof(amount));
     </script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-</html>
+</html>                                                                                                                                                     

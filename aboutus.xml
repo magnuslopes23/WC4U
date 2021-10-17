@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<admin>
+    <admininfo>
+        <name>Magnus Lopes</name>
+        <age>44</age>
+        <email>magnuslopes23@gmail.com</email>
+        <phno>+91 1234567890</phno>
+        <designation>Admin</designation>
+    </admininfo>
+    <admininfo>
+        <name>mervin kajar</name>
+        <age>45</age>
+        <email>magnuskajar@gmail.com</email>
+        <phno>+91 0987654321</phno>
+        <designation>Co-Admin</designation>
+    </admininfo>
+    <admininfo>
+        <name>jilson forklund</name>
+        <age>44</age>
+        <email>jilsonforklund69@gmail.com</email>
+        <phno>+91 1222334550</phno>
+        <designation>Secretary</designation>
+    </admininfo>
+</admin>

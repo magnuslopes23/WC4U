@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
                     <li><a href="#events">EVENT</a></li>
                     <li><a href="#donate">DONATE</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="login.html">ADMIN</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,24 +35,25 @@
             <div class='para'>
                 <h1 style='font-family:Courgette, cursive;color:#F7DC5F'>Welcome</h1>
                 <p style='text-align:left;font-family:Courgette, cursive;font-size:18px;color:#F7DC5F'><strong>OUR ORPHANS</strong> Meet the most amazing kids in the world.<br>
-                Our children are the very heart of our mission. Though all come from destitute and desperate situations, they are all cared for as members of our large family and treated as the beautiful individuals that they are. As with all children worldwide, each boy and girl comes to us with their own unique dreams, passions and talents. Our job is to develop the whole person, not simply feed and clothe a needy child.</p>            
+                Our children are the very heart of our mission. Though all come from destitute and desperate situations, they are all cared for as members of our large family and treated as the beautiful individuals that they are. As with all children worldwide, each boy and girl comes to us with their own unique dreams, passions and talents. Our job is to develop the whole person, not simply feed and clothe a needy child.</p>
+                <p style='font-family:Courgette, cursive;color:#F7DC5F'>For more information about our <a href="aboutus.xml">ADMIN</a> click here </p>            
             </div>
         </div>
-        <br id='events'>
-        <div class='container-2' >
+        <br >
+        <div class='container-2' id='events' >
             <h2 class='event-title'>EVENTS &nbsp WE &nbsp ORGANISE</h2>
             <a href="event.html"><img class='event-image' src="images/beach.jpg" alt=""></a>
             <a href="event.html"><img class='event-image' src="images/marathon.jpg" alt=""></a> 
-            <a href="event.php"><img class='event-image' src="images/blood.jpg" alt=""></a>
+            <a href="event.html"><img class='event-image' src="images/blood.jpg" alt=""></a>
         </div>
         <br><br>
         <div class='container-3' id='donate'>
             <h2 class='event-title'>DONATE &nbsp NOW</h2>
-            <a href="donate.php"> <img class='donate-image' src="images/mother.jpg" alt=""></a>
+            <a href="donate.html"> <img class='donate-image' src="images/mother.jpg" alt=""></a>
         </div>
     </div>
-    <section class='contact' id='contact'>
-      <div class='content'>
+    <section class='contact'>
+      <div class='content'  id='contact'>
         <h2>CONTACT US</h2>
       </div>
       <div class='container-4'>
@@ -81,27 +83,37 @@
           </div>
         </div>
         <div class="contactForm">
-          <form action="">
+          <form action="contact.php" method="POST" >
             <h2>Send Message</h2>
             <div class='inputBox'>
-              <input type="text" name='' required>
-              <span>Full Name</span>
+              <span >Full Name</span><br>
+              <input type="text" name='name' id="fname" min="3" maxlength="15" >
+             
+              <br>
+              <span id="error"></span>
             </div>
             <div class='inputBox'>
-              <input type="text" name='' required>
-              <span>Email</span>
+                <span>Email</span><br>
+              <input type="text" name='email' id="email" >
+              <br>
+              <span id="error1"></span>
             </div>
             <div class='inputBox'>
-              <textarea style='background-color:white;color:black' name="" id="" cols="30" rows="10" required></textarea>
-              <span>Your Feeedback</span>
+              
+              <span > Feedback</span><br>
+              <textarea style='background-color:white;color:black' name="feedback" id="feedback" cols="30" rows="10"  ></textarea>
+              <br>
+              <span id="error2"></span>
             </div>
             <div class='inputBox'>
-              <input type="submit" value='Send'>
+              <button style='background-color: #707070; height: 30px;color: white; font-size: 20px' onclick="return validate()" type="submit" name='submit'>Submit</button>
+              
             </div>
           </form>
         </div>
       </div>
     </section>
+
     <br>
     <br>
     <footer class="footer-distributed" id="contact">
@@ -112,14 +124,14 @@
             <a href="#events">Events</a>
             <a href="#donate">Donate</a>
             <a href="#contact">Contact</a>
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
             </p>
             <p class="footer-company-name">WC4U © 2020</p>
         </div>
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span><span> We Care For You, <br>
+                <p><span> We Care For You, <br>
                   Virar west, 
                   Mumbai 401301</span></p>
             </div>
@@ -133,7 +145,7 @@
             </div>
         </div>
         <div class="footer-right">
-            <p class="footer-company-about">
+            <!-- <p class="footer-company-about">
                 <span>About WC4U</span>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deserunt qui incidunt optio rem soluta corporis amet et harum laboriosam eveniet est voluptas beatae.
             </p>
@@ -142,10 +154,70 @@
                 <a href="https://www.linkedin.com/company/information-technology-student-association-sfit/"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="mailto:itsasfitofficial@gmail.com"><i class="fa fa-envelope"></i></a>
-            </div>
+            </div> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.8915502615405!2d72.8536084149074!3d19.243557651684846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13affffffff%3A0xfd071f1d3a7844ef!2sSt.%20Francis%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1602675310782!5m2!1sen!2sin" width="300px" height="200px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </footer>
     <script>
+      function validate(){
+      var names=document.getElementById("fname").value;
+      var namez=names.trim();
+      var regex=/^[a-zA-Z- ]+([w ]{0,})+[a-zA-Z]+$/;  
+      
+      if(namez==""){
+            document.getElementById("error").innerHTML="Please fill out this field";
+            document.getElementById("error").style.color="red";
+            //alert("fiil out");
+            
+            return false;
+            
+      }
+      else if(regex.test(namez)==false){
+          document.getElementById("error").innerHTML="Only characters are allowed";
+          document.getElementById("error").style.color="red";
+          return false;
+      }
+      else if (regex.test(namez)==true){
+          document.getElementById("error").innerHTML="";
+          
+      }
+      var emails=document.getElementById("email").value;
+      var regex1=/(^[A-Za-z_\-\.]{3,15})+([0-9]{0,})+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+      if(emails==""){
+            document.getElementById("error1").innerHTML="Please fill out this field";
+            document.getElementById("error1").style.color="red";
+            //alert("fiil out");
+            
+            return false;
+            
+      }
+      else if(regex1.test(emails)==false){
+          document.getElementById("error1").innerHTML="Enter a valid email address";
+          document.getElementById("error1").style.color="red";
+          return false;
+      }
+      else if (regex1.test(emails)==true){
+          document.getElementById("error1").innerHTML="";
+          
+      }
+     var feedbacks=document.getElementById("feedback").value;
+     //var feddbackz=feedbacks.trim();
+     if(feedbacks==""){
+            document.getElementById("error2").innerHTML="Please enter your feedback";
+            document.getElementById("error2").style.color="red";
+            //alert("fiil out");
+            
+            return false;
+            
+      }
+      else {
+          document.getElementById("error2").innerHTML="";
+          
+      }
+
+
+    }
+
         const toggleButton = document.getElementsByClassName('toggle-button')[0]
         const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -153,6 +225,6 @@
             navbarLinks.classList.toggle('active')
         })
     </script>
-    
+ 
 </body>
 </html>

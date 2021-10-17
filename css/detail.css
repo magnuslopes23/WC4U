@@ -1,0 +1,137 @@
+/*  */
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #f3e192;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin-left: 4.5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #eede96;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(126, 123, 123);
+    
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background-color: #1e2c3b;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.usepic{
+    height: 300px;
+    margin-left: 120px;
+    
+}
+.left{
+    margin-left: 50px;
+    background-color: black;
+    float: left;
+}
+.right{
+    margin-left: 400px;
+    background-color: black;
+    float:left;
+}
+.cont img{
+    height: 235px;
+   padding: 10px;  
+  
+  }
+  .cont img:hover{
+  
+    transform: scale(1.1);
+  }
+
+@media (max-width: 800px) {
+     
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    .brand-title{
+
+        margin-left: 0px;
+    }
+    .usepic{
+        margin-left: 50px;
+        margin-top: 20px;
+        display: inline;
+        height: 200px;
+    }
+    .left{ 
+        margin-left:130px;
+        display:inline;
+    }
+    .right{
+        margin:0px;
+        display:inline;
+    }
+
+}

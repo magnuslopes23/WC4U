@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>signup Form</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style='background:#070707'>
+        <nav class="navbar">
+            <div class="brand-title">WC4U</div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#events">EVENT</a></li>
+                    <li><a href="index.html#donate">DONATE</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </div>
+        </nav>
+	<!-- <img class="wave" src="images/wave.png"> -->
+	<div class="container">
+		<div class="img">
+			<img src="images/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="admin.php" method="POST">
+				<img src="images/avatar.svg">
+				<h2 class="title" style='color:#F7DC5F'></h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<label style='color:white' for="username">Username &nbsp;</label>
+							  <input type="text" class="input" id='username' name="username">
+							  <span id="error1" style="margin-left: 20px;">&nbsp;</span>
+           		   </div>
+           		</div>
+				<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<label style='color:white' for="email" >Email &nbsp;</label>
+						   <input type="email" class="input" id="email" name="email">
+						   <span id="error2" style="margin-left: 20px;"></span>
+            	   </div>
+            	</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<label style='color:white' for="password">Password &nbsp;</label>
+						   <input type="password" class="input" id="password" name="password">
+						   <br><br><br>
+						   <span id="error3" style="margin-left: 20px;">&nbsp;</span>
+            	   </div>
+				</div>	
+            	<input type="submit" class="btn" value="signup" style="margin-top:60px ;" onclick="return validateadmin()">
+            </form>
+        </div>
+    </div>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
+	</script>
+	<script>
+    
+		function validateadmin(){
+			var usernamez=document.getElementById("username").value;
+		   // var emails=document.getElementById("email").value;
+			var regex=/^[a-zA-Z]+([w ]{0,})+([a-zA-Z]{0,})$/;
+			
+			if(usernamez==""){
+				  document.getElementById("error1").innerHTML="Please Enter Username";
+				  document.getElementById("error1").style.color="red";
+				  //alert("fiil out");
+				  
+				  return false;
+				  
+			}
+			else if(usernamez.length<3 || usernamez.length>18){
+				document.getElementById("error1").innerHTML="Length should be between 3 and 18";
+				document.getElementById("error1").style.color="red";
+				return false;
+			}
+			else if(regex.test(usernamez)==false){
+				document.getElementById("error1").innerHTML="Only characters are allowed";
+				document.getElementById("error1").style.color="red";
+				return false;
+			}
+			else if(regex.test(usernamez)==true){
+				document.getElementById("error1").innerHTML="";
+				
+			}
+		   
+		   
+			var emails=document.getElementById("email").value;
+			var regex1=/(^[A-Za-z_\-\.]{3,15})+([0-9]{0,})+\@([A-Za-z_\-\.])+\.([A-Za-z]{2,4})$/;
+			if(emails==""){
+				  document.getElementById("error2").innerHTML="Please Enter Email";
+				  document.getElementById("error2").style.color="red";
+				  //alert("fiil out");
+				  
+				  return false;
+				  
+			}
+			else if(regex1.test(emails)==false){
+				document.getElementById("error2").innerHTML="Enter a valid email address";
+				document.getElementById("error2").style.color="red";
+				return false;
+			}
+			else if(regex1.test(emails)==true){
+				document.getElementById("error2").innerHTML="";
+				
+			}
+			
+			
+			
+			// var passwords=document.getElementById("password").value;
+			// var regex2=/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+			// if(regex2.test(passwords)==false){
+			// 	document.getElementById("error3").innerHTML="Password should contain at least 1 uppercase ,1 lowercase, 1 number and special character with min 8 length .";
+			// 	document.getElementById("error3").style.color="red";
+			// 	return false;
+			// }
+			return true;
+		}
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+</html>
